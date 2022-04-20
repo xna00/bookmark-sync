@@ -1,0 +1,14 @@
+{
+  "name": "bookmark-sync",
+  "description": "Build an Extension!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "./dist/background/index.js"
+  },
+  "permissions": ["storage", "bookmarks"],
+  "action": {
+    "default_popup": "./dist/popup/index.html"
+  },
+  "host_permissions": ["https://*/*"]
+}
