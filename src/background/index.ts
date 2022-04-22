@@ -90,7 +90,8 @@ const upload = () =>
     .then((res) => res.json())
     .then((res) => {
       console.log(res);
-    });
+    })
+    .catch(console.log);
 
 const download = () =>
   getStorageData()
@@ -113,7 +114,8 @@ const download = () =>
     .then(([n, t]) => sync(n.children ?? [], t, n.id))
     .then(() => {
       console.log("sync done");
-    });
+    })
+    .catch(console.log);
 
 download();
 setInterval(download, 1000 * 60 * 30);
